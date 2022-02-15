@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quintessential&display=swap');
+html{
+    background-color:#2D2D2D;
+  }
+  .navbar{
+      display: flex;
+      justify-content: flex-end;
+      padding: 10px;
+  }
+  #episode{
+      font-family:Quintessential ;
+    font-size: 18px;
+background-color: #AB862B;
+padding: 20px;
+color: white;
+border-radius: 20px;
+height:30px;
+width: 100px;
+margin-top: 20px;
+margin-right: 20px;
+padding:25px;
+}
+  /* #nav-container a{
+    text-align:center;
+    color:#AB862B;
+    font-family:Quintessential ;
+    background-color:#f5f5f5;
+    display:inline-block;
+    padding:10px;
+    text-decoration:none;
+    margin:10px;
+    border-radius:10px;
+    box-shadow:5px 5px 5px #2D2D2D,-5px -5px 5px #636161;
+  }
+  #nav-container a:hover{
+    box-shadow:5px 5px 5px #dcdcdc inset,-5px -5px 5px #ffffff inset;
+  }
+  #More{
+    position:absolute;
+    bottom:20px;right:20px;
+  }
+  @media screen and (max-width:800px){
+    #nav-container{
+      display:flex;
+      flex-wrap: wrap;
+      align-content: flex-start;
+      align-items: baseline;
+    }
+    
+  } */
+  /**********searchbox************/
+  .main{
+      display: flex;
+      justify-content: space-between;
+    margin-top: 20px;
+float: right;  
+  width: 30%;
+  }
+  .main input,button{
+    width:100%;
+    border:1px solid #AB862B;
+    border-right:70px;
+    font-size: 18px;
+    padding:12px;
+    border-radius: 20px;
+    background-color: transparent;
+    color:#dcdcdc;
+  }
+  .main input:hover{
+    opacity: 0.5;
+  }
+  .main button{
+    width:10%;
+
+    color:#AB862B;
+    transition: all 0.3s;
+    float: right;
+    border-left:0px;
+    display: flex;
+    border-radius: 10px;
+    align-items: baseline;
+    flex-wrap: wrap;
+
+  }
+  .main button:hover{
+    opacity: 0.5;
+  }
+    
+    
