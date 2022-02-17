@@ -66,6 +66,17 @@ float: right;
     opacity: 0.5;
     width: 200px;
   }
-
-    
+h2{
+  font-family:Quintessential ;
+  margin-bottom: 20px 10px;
+  display: flex;
+  justify-content: center;
+  color: #AB862B;
+  text-decoration:underline ;
+}
+  img{
+    display: inline-block;
+    position: relative;
+    margin-top: 0;
+  }  
     
