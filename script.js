@@ -1,6 +1,9 @@
 function root(imgsrc,title,summary,url,airtime){
  let rootcard=document.createElement('div')
- rootcard.classList.add('card')
+ rootcard.classList.add('card','col-lg-3','col-md-6','col-sm-3')
+//  let row=document.createElement('div')
+//  row.classList.add('row')
+//  rootcard.appendChild(row)
  let imag=document.createElement('div')
  imag.classList.add('image')
  let image1=document.createElement('img')
@@ -32,12 +35,16 @@ function root(imgsrc,title,summary,url,airtime){
  let i2=document.createElement('i')
  i2.classList.add('bi', 'bi-alarm')
  span.appendChild(i2)
- span.innerText=airtime
+ span.innerText="      00:"+airtime
  cardbody.appendChild(span)
  rootcard.appendChild(cardbody)
  let container=document.querySelector('.container')
 container.appendChild(rootcard)
-console.log(rootcard)
+    // let card=document.createElement("div")
+    // card.classList.add('card','col-lg-3', 'col-md-6 col-sm-3' )
+    // let container=document.querySelector('.container')
+    // container.appendChild(card)
+    // console.log(container)
 }
 
 
@@ -56,7 +63,7 @@ movieData()
 .then((data)=>{
     for (const element of data) {
      root(element.image.medium,element.name,element.summary,element.url,element.runtime) 
-     
+
      let selector=document.querySelector('#episode') 
      let option=document.createElement('option')
      option.value=element.name
