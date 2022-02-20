@@ -38,11 +38,7 @@ function root(imgsrc,title,summary,url,airtime){
  rootcard.appendChild(cardbody)
  let container=document.querySelector('.container')
 container.appendChild(rootcard)
-    // let card=document.createElement("div")
-    // card.classList.add('card','col-lg-3', 'col-md-6 col-sm-3' )
-    // let container=document.querySelector('.container')
-    // container.appendChild(card)
-    // console.log(container)
+   
 }
 
 
@@ -65,10 +61,36 @@ movieData()
      let selector=document.querySelector('#episode') 
      let option=document.createElement('option')
      option.value=element.name
-     option.innerText=`S${element.season} -E${element.number}-${element.name}`
-
      selector.appendChild(option)
+     selector.addEventListener('change',(e)=>{
+        let ev=e.target.value
+       
+        if(ev===element.name){
+              rootcard.style.display=''
+        }else{
+            rootcard.style.display='none'
+        }
      
+        
+      })
+      
+     ///format like S01E09
+     if (element.number>=10) {
+              option.innerText=`S0${element.season} -E${element.number}-${element.name}`
+
+     }else{
+        option.innerText=`S0${element.season} -E0${element.number}-${element.name}`
+
+     }
+
+
+     
+     
+    
+
+    
+
+    
     }
 })
 
