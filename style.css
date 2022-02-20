@@ -9,9 +9,11 @@ body {
 }
 .navbar {
   display: flex;
-  justify-content: space-between;
+  flex-wrap:wrap;
+  justify-content:space-between;
   padding: 10px;
   background-image: linear-gradient(to left, #2d2d2d, #8f732c);
+  
 }
 #episode {
   font-family: Quintessential;
@@ -20,7 +22,7 @@ body {
   color: white;
   border-radius: 20px;
   height: 40px;
-
+   width: 20rem;
   margin-top: 20px;
   margin-right: 20px;
   padding: 5px;
@@ -34,14 +36,14 @@ option {
   
   margin-top: 20px;
   float: right;
-  width: 30%;
+  
 }
 .main input {
-  width: 80%;
+  width: 70%;
   border: 1px solid #ab862b;
-  border-right: 70px;
+ 
   font-size: 18px;
-  padding: 12px;
+  padding: 9px;
   border-radius: 20px;
   background-color: transparent;
   color: #dcdcdc;
@@ -49,8 +51,8 @@ option {
 
 .main input:hover {
   opacity: 0.5;
-
-  width: 120%;
+  transition: width 1s, height 1s;
+  width: 80%;
 }
 .main i {
   width: 10%;
@@ -65,9 +67,6 @@ option {
  
   font-size: 30px;
 }
-.main i:hover {
-  opacity: 0.5;
-}
 
 h2 {
   font-family: Quintessential;
@@ -78,10 +77,8 @@ h2 {
   text-decoration: underline;
   background-image: linear-gradient(to left, #2d2d2d, #8f732c);
 }
-img {
-  /* display: inline-block;
-  position: relative; */
-  /* margin-top: 0; */
+.image {
+  padding: 10px;
 }
 
 .card {
@@ -90,7 +87,7 @@ img {
   background-image: linear-gradient(to right, #2d2d2d, #8f732c);
    margin: 2rem;
    text-align: center;
-   
+   width: 300px;
 }
 .card:hover {
   cursor: pointer;
@@ -101,6 +98,7 @@ img {
 .summary {
   font-family: Quintessential;
   color: #dcdcdc;
+  padding:10px;
 }
 .title {
   font-family: Quintessential;
@@ -121,3 +119,4 @@ img {
 
   margin-bottom: 20px;
 }
+

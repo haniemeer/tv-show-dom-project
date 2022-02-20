@@ -1,9 +1,7 @@
 function root(imgsrc,title,summary,url,airtime){
  let rootcard=document.createElement('div')
  rootcard.classList.add('card','col-lg-3','col-md-6','col-sm-3')
-//  let row=document.createElement('div')
-//  row.classList.add('row')
-//  rootcard.appendChild(row)
+
  let imag=document.createElement('div')
  imag.classList.add('image')
  let image1=document.createElement('img')
@@ -20,7 +18,7 @@ function root(imgsrc,title,summary,url,airtime){
  cardbody.appendChild(h3)
  let p=document.createElement('p')
  p.classList.add('summary')
- p.innerText=summary
+ p.innerText= summary
  cardbody.appendChild(p)
  let a=document.createElement('a')
  a.classList.add('link')
