@@ -1,6 +1,6 @@
 function root(imgsrc,title,summary,url,airtime){
  let rootcard=document.createElement('div')
- rootcard.classList.add('card','col-lg-3','col-md-6','col-sm-3')
+ rootcard.classList.add('card')
 
  let imag=document.createElement('div')
  imag.classList.add('image')
@@ -41,8 +41,6 @@ container.appendChild(rootcard)
    
 }
 
-
-
 const movieData=async ()=>{
     try {
        const res=await fetch('https://api.tvmaze.com/shows/41524/episodes')
@@ -64,12 +62,12 @@ movieData()
      selector.appendChild(option)
      selector.addEventListener('change',(e)=>{
         
-        let ev=e.target.value
+      
        
-        if(ev===element.name){
-              rootcard.style.display='block'
+        if(selector.value===h3.innerText){
+            rootcard.classList.add('none')  
         }else{
-            rootcard.style.display='none'
+            rootcard.classList.remove('none')
         }
      
         
