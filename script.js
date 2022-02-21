@@ -65,9 +65,9 @@ movieData()
       
        
         if(selector.value===element.name){
-            rootcard.classList.add('none')  
+            rootcard.style.display='none' 
         }else{
-            rootcard.classList.remove('none')
+            rootcard.style.display='block' 
         }
      
         
