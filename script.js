@@ -64,7 +64,7 @@ movieData()
         
       
        
-        if(selector.value===h3.innerText){
+        if(selector.value===element.name){
             rootcard.classList.add('none')  
         }else{
             rootcard.classList.remove('none')
