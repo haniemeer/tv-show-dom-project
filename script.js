@@ -58,12 +58,10 @@ movieData()
 
      let selector=document.querySelector('#episode') 
      let option=document.createElement('option')
-     option.value=element.name
+     option.innerText=element.name
      selector.appendChild(option)
      selector.addEventListener('change',(e)=>{
         
-      
-       
         if(selector.value===element.name){
             rootcard.style.display='none' 
         }else{
