@@ -63,9 +63,9 @@ movieData()
      selector.addEventListener('change',(e)=>{
         
         if(selector.value===element.name){
-            rootcard.style.display='none' 
-        }else{
             rootcard.style.display='block' 
+        }else{
+            rootcard.style.display='none' 
         }
      
         
