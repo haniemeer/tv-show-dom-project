@@ -63,10 +63,11 @@ movieData()
      option.value=element.name
      selector.appendChild(option)
      selector.addEventListener('change',(e)=>{
+        
         let ev=e.target.value
        
         if(ev===element.name){
-              rootcard.style.display=''
+              rootcard.style.display='block'
         }else{
             rootcard.style.display='none'
         }
