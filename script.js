@@ -61,7 +61,8 @@ movieData()
      let option=document.createElement('option')
      option.innerText=element.name
      selector.appendChild(option)
-      
+    
+     
      ///format like S01E09
      if (element.number>=10) {
               option.innerText=`S0${element.season} -E${element.number}-${element.name}`
@@ -72,7 +73,7 @@ movieData()
      }
      
     
-              let select=document.querySelector('#episode')
+              let select=document.queryselectorAll('#episode')
             select.addEventListener('change',()=>{
                 getcard=document.querySelector('.card')
                  for(el of getcard){
