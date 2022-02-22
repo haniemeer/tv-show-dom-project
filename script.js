@@ -73,17 +73,17 @@ movieData()
      
     
               let select=document.querySelector('#episode')
-            select.addEventListener('change',(e)=>{
+            select.addEventListener('change',()=>{
                 getcard=document.querySelector('.card')
-                 console.log(getcard.h3)
+                 for(el of getcard){
                 
-                   if(getcard.h3===select.value){
+                   if(el.title===select.value){
                     getcard.style.display='block'
                     }else{
                     getcard.style.display='none'
                  
                      }
-                
+                }
             })
      
             
