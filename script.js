@@ -70,17 +70,28 @@ movieData()
         option.innerText=`S0${element.season} -E0${element.number}-${element.name}`
 
      }
-      let select=document.querySelector('#episode')
-select.addEventListener('change',(e)=>{
+     getcard=document.querySelector('.card')
+     for(el of getcard){
+              let select=document.querySelector('#episode')
+            select.addEventListener('change',(e)=>{
+                if(el.h3.innerText===select.value){
+                    getcard.style.display='block'
+                }else{
+                    getcard.style.display='none'
+                }
+            })
+     }
+//       let select=document.querySelector('#episode')
+// select.addEventListener('change',(e)=>{
         
-        if(select.value===element.name){
-            rootcard.style.display='block' 
-        }else{
-            rootcard.style.display='none' 
-        }
+//         if(select.value===element.name){
+//             rootcard.style.display='block' 
+//         }else{
+//             rootcard.style.display='none' 
+//         }
      
         
-      })
+//       })
     }
    
    
