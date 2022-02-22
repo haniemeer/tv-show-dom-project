@@ -70,8 +70,7 @@ movieData()
         option.innerText=`S0${element.season} -E0${element.number}-${element.name}`
 
      }
-    }
-    let select=document.querySelector('#episode')
+      let select=document.querySelector('#episode')
 select.addEventListener('change',(e)=>{
         
         if(select.value===element.name){
@@ -82,6 +81,8 @@ select.addEventListener('change',(e)=>{
      
         
       })
+    }
+   
    
 })
    
