@@ -73,9 +73,9 @@ movieData()
      }
      
     
-              let select=document.queryselectorAll('#episode')
+              let select=document.queryselector('#episode')
             select.addEventListener('change',()=>{
-                getcard=document.querySelector('.card')
+                getcard=document.querySelectorAll('.card')
                  for(el of getcard){
                 
                    if(el.title===select.value){
