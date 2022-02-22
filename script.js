@@ -37,9 +37,7 @@ function root(imgsrc,title,summary,url,airtime){
  rootcard.appendChild(cardbody)
  let container=document.querySelector('.container')
 container.appendChild(rootcard)
- let select=document.querySelector('#episode')
 
-   
 }
 
 
@@ -73,7 +71,8 @@ movieData()
 
      }
     }
-   select.addEventListener('change',(e)=>{
+    let select=document.querySelector('#episode')
+select.addEventListener('change',(e)=>{
         
         if(select.value===element.name){
             rootcard.style.display='block' 
@@ -83,6 +82,7 @@ movieData()
      
         
       })
+   
 })
    
 
