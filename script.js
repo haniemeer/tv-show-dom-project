@@ -77,7 +77,8 @@ movieData()
                 getcard=document.querySelectorAll('.title')
                  
                  for(let el of getcard){
-                  console.log(el)
+                  console.log(el.innerText)
+                  console.log(select.value)
                    if(el.title===select.value){
                     el.style.display='block'
                     }else{
