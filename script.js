@@ -77,7 +77,7 @@ movieData()
                 getcard=document.querySelector('.card')
                  
                 
-                   if(getcard.h3.innerText===select.value){
+                   if(getcard.h3===select.value){
                     getcard.style.display='block'
                     }else{
                     getcard.style.display='none'
