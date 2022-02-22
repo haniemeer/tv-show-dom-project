@@ -75,9 +75,9 @@ movieData()
               let select=document.querySelector('#episode')
             select.addEventListener('change',(e)=>{
                 if(el.h3.innerText===select.value){
-                    el.style.display='block'
+                    getcard.style.display='block'
                 }else{
-                    el.style.display='none'
+                    getcard.style.display='none'
                 }
             })
      }
