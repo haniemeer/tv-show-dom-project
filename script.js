@@ -81,10 +81,12 @@ movieData()
                     getcard.style.display='block'
                     }else{
                     getcard.style.display='none'
+                 
                      }
+                }
             })
      
-            }
+            
     }
    
    
