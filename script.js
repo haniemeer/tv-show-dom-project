@@ -40,7 +40,7 @@ container.appendChild(rootcard)
  let select=document.querySelector('#episode')
 select.addEventListener('change',(e)=>{
         
-        if(selector.value===element.name){
+        if(select.value===element.name){
             rootcard.style.display='block' 
         }else{
             rootcard.style.display='none' 
