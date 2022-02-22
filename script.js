@@ -72,11 +72,10 @@ movieData()
 
      }
      
-       seasonObj=[element.name]=element.name
               let select=document.queryselector('#episode')
             select.addEventListener('change',()=>{
                 getcard=document.querySelectorAll('.card')
-                 for(el of seasonObj){
+                 for(el of getcard){
                 
                    if(el.title===select.value){
                     getcard.style.display='block'
