@@ -72,7 +72,7 @@ movieData()
 
      }
      
-              let select=document.queryselector('#episode')
+              let select=document.querySelector('#episode')
             select.addEventListener('change',()=>{
                 getcard=document.querySelectorAll('.card')
                  for(el of getcard){
@@ -91,5 +91,6 @@ movieData()
    
    
 })
+
    
 
