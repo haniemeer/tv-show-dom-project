@@ -84,23 +84,24 @@ movieData()
                 
                 
             })
-             
-                      let inpt=document.querySelector('input')
+
+             let inpt=document.querySelector('input')
                     inpt.addEventListener('keyup',()=>{
-                        let sumCard=document.querySelectorAll('.summary,.title')
-                        // let nameCard=document.querySelectorAll('')
+                        let liveShare=document.querySelectorAll('.title')
                         let search=inpt.value
-                        // select.value="all"
-                             console.log(inpt.value) 
-                       if(element.name.toLowerCase().includes(search.toLowerCase())||element.summary.toLowerCase().includes(search.toLowerCase())){
+                         select.value="all"
+                        //  console.log(search)
+                        //  console.log(element.name)
+                        //  console.log(element.name.toLowerCase().includes(search.toLowerCase()))
+                        for (let live of liveShare) {
+                       if(element.name.toLowerCase().includes(search.toLowerCase())){
                           
-                           sumCard.parentElement.parentElement.style.display='block'
+                           live.parentElement.parentElement.style.display='block'
                        }else{
-                           sumCard.parentElement.parentElement.style.display='none'
+                           live.parentElement.parentElement.style.display='none'
                        }
-                       })
-    
-            
+                         }
+                             })
     }
    
    
