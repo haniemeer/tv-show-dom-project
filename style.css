@@ -32,14 +32,11 @@ option {
 }
 
 /**********searchbox************/
-.main {
-  
+
+ input {
   margin-top: 20px;
   float: right;
-  
-}
-.main input {
-  width: 70%;
+  width: 15%;
   border: 1px solid #ab862b;
  
   font-size: 18px;
@@ -49,24 +46,14 @@ option {
   color: #dcdcdc;
 }
 
-.main input:hover {
+ input:hover {
   opacity: 0.5;
-  transition: width 1s, height 1s;
-  width: 80%;
-}
-.main i {
-  width: 10%;
+  transition: width 2s, height 1s;
+  width: 20%;
 
-  color: #ab862b;
-  transition: all 0.4s;
-  float: right;
-
-  
-  padding: 10px;
- 
- 
-  font-size: 30px;
 }
+
+
 
 h2 {
   font-family: Quintessential;
@@ -89,12 +76,14 @@ h2 {
    margin: 2rem;
    text-align: center;
    width: 300px;
+   border-radius:10px
 }
 .card:hover {
   cursor: pointer;
   box-shadow: rgba(14, 30, 37, 0.12) 15px 17px 8px 8px,
     rgba(14, 30, 37, 0.32) 10px 15px 16px 0px;
   background-image: linear-gradient(to right, #2d2d2d, #8f732c);
+
 }
 .summary {
   font-family: Quintessential;
@@ -106,9 +95,7 @@ h2 {
   color: #bd8007;
   padding: 10px;
 }
-.bi {
-  padding: 10px;
-}
+
 
 .container {
   display: flex;
@@ -123,3 +110,14 @@ h2 {
 .none{
   display:none
 }
+.time{
+  font-family: Quintessential;
+  color: #bd8007;
+
+}
+.link{
+  margin-bottom:2px
+  text-decoration:none
+  color: #bd8007;}
+
+

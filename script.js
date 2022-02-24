@@ -23,7 +23,6 @@ function root(imgsrc,title,summary,url,airtime){
  a.classList.add('link')
  a.href=url
  let i=document.createElement('i')
- i.classList.add('bi', 'bi-play-circle')
  i.innerText="watch?"
  a.appendChild(i)
  cardbody.appendChild(a)
@@ -39,9 +38,6 @@ function root(imgsrc,title,summary,url,airtime){
 container.appendChild(rootcard)
 
 }
-
-
-
 const movieData=async ()=>{
     try {
        const res=await fetch('https://api.tvmaze.com/shows/41524/episodes')
@@ -56,38 +52,54 @@ movieData()
 .then((data)=>{
     for (const element of data) {
      root(element.image.medium,element.name,element.summary,element.url,element.runtime) 
-
+    ///took the episodes in option tag
      let selector=document.querySelector('#episode') 
      let option=document.createElement('option')
      option.innerText=element.name
      selector.appendChild(option)
-    
-     
      ///format like S01E09
      if (element.number>=10) {
               option.innerText=`S0${element.season} -E${element.number}-${element.name}`
 
      }else{
         option.innerText=`S0${element.season} -E0${element.number}-${element.name}`
-
      }
-     
+        ////selector of episodes
               let select=document.querySelector('#episode')
             select.addEventListener('change',()=>{
                 getcard=document.querySelectorAll('.title')
-                 
                  for(let el of getcard){
-                  console.log(el.innerText)
-                  console.log(select.value)
-                   if(el.title===select.value){
-                    el.style.display='block'
+                  const sl=select.value.slice(9)
+                   if(el.innerText===sl){
+                    el.parentElement.parentElement.style.display='block'
                     }else{
-                    el.style.display='none'
-                      
+                    el.parentElement.parentElement.style.display='none'  
                      }
+                     if(select.value==="all"){
+                         el.parentElement.parentElement.style.display='block'
+                     }
+                    //live searchhh
+                    
                 }
+                
+                
             })
-        
+             
+                      let inpt=document.querySelector('input')
+                    inpt.addEventListener('keyup',()=>{
+                        let sumCard=document.querySelectorAll('.summary,.title')
+                        // let nameCard=document.querySelectorAll('')
+                        let search=inpt.value
+                        // select.value="all"
+                             console.log(inpt.value) 
+                       if(element.name.toLowerCase().includes(search.toLowerCase())||element.summary.toLowerCase().includes(search.toLowerCase())){
+                          
+                           sumCard.parentElement.parentElement.style.display='block'
+                       }else{
+                           sumCard.parentElement.parentElement.style.display='none'
+                       }
+                       })
+    
             
     }
    
