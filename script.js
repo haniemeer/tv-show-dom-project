@@ -97,8 +97,10 @@ movieData()
                          console.log(search)
                         //  console.log(liveShare.innerText.toLowerCase().includes(search.toLowerCase()))
                           console.log(liveShare.textContent===(search))
+                          
                         for (let live of liveShare) {
-                       if(liveShare.textContent===(search.toLowerCase()) ){
+                            // console.log(live.textContent)
+                       if(live.textContent.toLowerCase().includes(search.toLowerCase()) ){
                           
                            live.parentElement.parentElement.style.display='block'
                        }else{
