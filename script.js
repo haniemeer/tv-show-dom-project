@@ -64,9 +64,12 @@ movieData()
      }else{
         option.innerText=`S0${element.season} -E0${element.number}-${element.name}`
      }
-        ////selector of episodes
+        
+             
+    }
+                            ////selector of episodes
               let select=document.querySelector('#episode')
-            select.addEventListener('change',()=>{
+             select.addEventListener('change',()=>{
                 getcard=document.querySelectorAll('.title')
                  for(let el of getcard){
                   const sl=select.value.slice(9)
@@ -78,23 +81,24 @@ movieData()
                      if(select.value==="all"){
                          el.parentElement.parentElement.style.display='block'
                      }
-                    //live searchhh
+                   
                     
                 }
                 
                 
             })
 
-             let inpt=document.querySelector('input')
+                        //live searchhh
+                    let inpt=document.querySelector('input')
                     inpt.addEventListener('keyup',()=>{
                         let liveShare=document.querySelectorAll('.title')
                         let search=inpt.value
-                         select.value="all"
-                        //  console.log(search)
-                        //  console.log(element.name)
-                        //  console.log(element.name.toLowerCase().includes(search.toLowerCase()))
+                        
+                         console.log(search)
+                        //  console.log(liveShare.innerText.toLowerCase().includes(search.toLowerCase()))
+                          console.log(liveShare.textContent===(search))
                         for (let live of liveShare) {
-                       if(element.name.toLowerCase().includes(search.toLowerCase())){
+                       if(liveShare.textContent===(search.toLowerCase()) ){
                           
                            live.parentElement.parentElement.style.display='block'
                        }else{
@@ -102,7 +106,6 @@ movieData()
                        }
                          }
                              })
-    }
    
    
 })
